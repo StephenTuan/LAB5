@@ -1,7 +1,9 @@
 package com.example.lab5.dialog
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -26,12 +28,15 @@ fun DialogComponent(
     Dialog(onDismissRequest = { onConfirmation() }) {
         Card(
             colors = CardDefaults.cardColors(containerColor = Color.White),
-            modifier = Modifier.padding(20.dp),
+            modifier = Modifier.padding(20.dp)
+                .fillMaxWidth(),
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp)
         ) {
             Column(
-                modifier = Modifier.padding(16.dp),
-                horizontalAlignment = Alignment.Start
+                modifier = Modifier.padding(16.dp)
+                    .fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
                 Text(dialogTitle, style = MaterialTheme.typography.titleLarge)
                 Spacer(modifier = Modifier.height(20.dp))
@@ -39,7 +44,7 @@ fun DialogComponent(
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
                     onClick = onConfirmation,
-                    modifier = Modifier.align(Alignment.End),
+                    modifier = Modifier.align(Alignment.CenterHorizontally),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.DarkGray,
                         contentColor = Color.White

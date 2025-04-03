@@ -29,9 +29,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-//            LoginApp()
+            LoginApp()
 //            Bai2()
-            Bai3()
+//            Bai3()
         }
     }
 }
